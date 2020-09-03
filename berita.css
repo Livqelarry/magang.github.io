@@ -1,0 +1,164 @@
+:root{
+    --main-color-primary: #005720;
+    --main-color-second: #C3FFD8;
+    --primay-font-size: 16px;
+}
+
+/* header berita section */
+.header-berita{
+    padding: 120px 0 60px;
+    min-height: 70vh;
+    background-color: var(--main-color-second);
+}
+.wrap-beritaUtama{
+    display: grid;
+    grid-template-columns: auto 500px 250px 250px auto;
+    grid-template-rows: 200px 200px;
+    grid-row-gap: 50px;
+    justify-items: center;
+    align-items: center;
+}
+.box-beritaUtama{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 480px;
+    width: 480px;
+}
+.box-beritaUtama img{
+    width: 100%;
+    
+    border-radius: 10px;
+}
+.deskripsi-beritaUtama{
+    width: 300px;
+    position: relative;
+    color: white;
+    z-index: 2;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.button-beritaUtama{
+    margin-top: 5px;
+    color: var(--main-color-second);
+    border: 1.5px solid var(--main-color-second);
+}
+.button-beritaUtama:hover{
+    background-color: var(--main-color-second);
+    color: var(--main-color-primary);
+    font-weight: bold;
+}
+
+.box2{
+    height: 225px;
+    width: 225px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.deskripsi2{
+    width: 150px;
+}
+
+.box3{
+    height: 225px;
+    width: 225px;
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+.box4{
+    height: 225px;
+    width: 225px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.box5{
+    height: 225px;
+    width: 225px;
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+
+
+/* seputar FKDT Yogyakarta */
+.seputarFKDT-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.seputarFKDT-section .title{
+    padding-top: 80px;
+}
+.kartu-seputar{
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width:1024px){
+    .wrap-beritaUtama{
+        grid-template-columns: auto 200px 200px auto;
+        grid-template-rows: 400px 200px 200px;
+        grid-row-gap: 0;
+    }
+    .box-beritaUtama img{
+        transform: scale(0.8);
+    }
+    .box-beritaUtama{
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    .box2{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .box3{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .box4{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .box5{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+
+    /* seputar FKDT section */
+    .kartu-seputar{
+        margin-bottom: 0;
+    }
+}
+
+/* mobile mode */
+@media only screen and (max-width:500px){
+
+    /* header-berita section */
+    .header-berita{
+        overflow: hidden;
+    }
+    .title-beritaUtama{
+        padding-bottom: 20px;
+    }
+    .wrap-beritaUtama{
+        height: auto;
+    }
+    .img-boxBeritaUtama{
+        transform: scale(0.7);
+    }
+    .wrap-beritaUtama{
+        grid-template-columns: auto 150px 150px auto;
+        grid-template-rows: 270px 180px 100px;
+    }
+    .deskripsi-beritaUtama p{
+        font-size: 12px;
+        padding: 0 20px;
+    }
+    .button-beritaUtama{
+        transform: scale(0.75);
+        margin-top: 0;
+    }
+
+}
